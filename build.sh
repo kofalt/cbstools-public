@@ -146,3 +146,8 @@ cp -rv build/cbstools/ pypi/
 
 # Find and copy the shared object file for the current architecture
 find build/ -type f | grep '.so$' | head -n 1 | xargs -I '{}' -- cp '{}' pypi/cbstools/_cbstools.so
+
+(
+	cd pypi
+	python setup.py bdist_wheel
+)
