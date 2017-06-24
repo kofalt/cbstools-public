@@ -15,3 +15,6 @@
 /pypi/cbstools/*.jar
 /pypi/cbstools/__init__.py
 /pypi/cbstools/*.so
+/pypi/build/
+/pypi/cbstools.egg-info/
+/pypi/dist/
