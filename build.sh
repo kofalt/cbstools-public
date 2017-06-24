@@ -123,7 +123,7 @@ jcc_args=(
 	"--include lib/Jama-mipav.jar"
 
 	# Name the python module
-	"--python cbstoolsjcc"
+	"--python cbstools"
 
 	# Java VM heap size limit
 	"--maxheap 4096M"
@@ -137,7 +137,15 @@ jcc_args=(
 
 python -m jcc ${jcc_args[@]}
 
-echo
-echo
 
-ls -la build
+#
+# Assemble PYPI package
+#
+
+echo "Copying files over to pypi package..."
+
+# Copy everything except the init py, which we override
+find  build/cbstools/ -type f | grep -v '__init__.py' | xargs -I '{}' -- cp '{}' pypi/cbstools/
+
+# Find and copy the shared object file for the current architecture
+find build/ -type f | grep '.so$' | head -n 1 | xargs -I '{}' -- cp '{}' pypi/cbstools/_cbstools.so

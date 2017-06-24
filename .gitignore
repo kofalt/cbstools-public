@@ -12,3 +12,5 @@
 /lib/mipav-*
 /lib/JIST*.jar
 /lib/jcc
+/pypi/cbstools/*.jar
+/pypi/cbstools/*.so
