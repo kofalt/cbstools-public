@@ -144,8 +144,7 @@ python -m jcc ${jcc_args[@]}
 
 echo "Copying files over to pypi package..."
 
-# Copy everything except the init py, which we override
-find  build/cbstools/ -type f | grep -v '__init__.py' | xargs -I '{}' -- cp '{}' pypi/cbstools/
+cp -rv build/cbstools/ pypi/
 
 # Find and copy the shared object file for the current architecture
 find build/ -type f | grep '.so$' | head -n 1 | xargs -I '{}' -- cp '{}' pypi/cbstools/_cbstools.so

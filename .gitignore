@@ -13,4 +13,5 @@
 /lib/JIST*.jar
 /lib/jcc
 /pypi/cbstools/*.jar
+/pypi/cbstools/__init__.py
 /pypi/cbstools/*.so
