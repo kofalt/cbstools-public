@@ -22,7 +22,7 @@ setup(
                  'Programming Language :: Python :: 2.7',
                  ],
     keywords='MRI high-resolution laminar',
-    package_data={'cbstoolsjcc': ['_cbstools.so',
+    package_data={'cbstools': ['_cbstools.so',
                                   'cbstools.jar',
                                   'cbstools-lib.jar',
                                   'commons-math3-3.5.jar',

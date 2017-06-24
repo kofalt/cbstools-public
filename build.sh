@@ -102,6 +102,7 @@ echo "Compiling..."
 mkdir -p build
 javac -cp ${deps_list} ${javac_opts[@]} de/mpg/cbs/core/*/*.java de/mpg/cbs/*/*.java
 
+# Some other examples I found elsewhere, that we're not currently using
 # $CODE/de/mpg/cbs/*/*.java $CODE/de/mpg/cbs/core/*/*.java $CODE/de/mpg/cbs/jist/*/*.java $CODE/edu/jhu/ece/iacl/jist/*/*.java
 
 echo "Assembling..."
@@ -131,9 +132,6 @@ jcc_args=(
 	# Compile
 	"--build"
 )
-
-# echo $JAVA_HOME
-# echo $LD_LIBRARY_PATH
 
 python -m jcc ${jcc_args[@]}
 
