@@ -9,3 +9,6 @@
 /cbstools.jar
 /cbstoolsjcc.egg-info/
 /dist/
+/lib/mipav-*
+/lib/JIST*.jar
+/lib/jcc
